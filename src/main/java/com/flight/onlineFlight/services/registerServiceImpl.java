@@ -14,10 +14,17 @@ public class registerServiceImpl implements registerService {
 	passengerModel passt =	regrepo.save(passnger);
 		return passt;
 	}
+	@Override
 	public passengerModel login(String username,String password)
 	{
 		passengerModel pass =	regrepo.findByUsernameAndPass(username, password);
 		return pass;
+	}
+	@Override
+	public passengerModel getPassengerByEmail(String email) {
+		
+		passengerModel pemail=regrepo.findByEmail(email);
+		return pemail;
 	}
  
 }

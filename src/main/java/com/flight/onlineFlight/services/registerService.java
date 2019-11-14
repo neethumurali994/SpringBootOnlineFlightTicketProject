@@ -6,5 +6,5 @@ public interface registerService {
 
 	public passengerModel addpassenger(passengerModel model);
 	public passengerModel login(String username,String password);
-	
+	public passengerModel getPassengerByEmail(String email);
 }

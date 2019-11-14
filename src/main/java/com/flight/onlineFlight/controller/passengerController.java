@@ -50,6 +50,14 @@ public class passengerController {
 		bookingconfirm b=	bookserv.addbookingdet(book);
 		return"Booking is Confirmed";
 	}
+	@CrossOrigin
+	@GetMapping("/getbyemail")
+	public @ResponseBody passengerModel getPassengerByEmail(@RequestParam String email)
+	{
+		passengerModel passenger=reg.getPassengerByEmail(email);
+		return passenger;
+	}
+	
 	}
 	
 
